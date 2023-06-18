@@ -110,7 +110,7 @@ if __name__ == '__main__':
   
   server {
     listen 80;
-    server_name your_domain.com;
+    server_name domain_name;
 
     location / {
         proxy_pass http://localhost:8000;
