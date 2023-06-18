@@ -5,16 +5,35 @@ This is the interview questions for python dev skills.
 ---
 ### 1. How do you setup local python dev environment?  
 - What IDE do you use?
+  PyCharm
 - How do you setup python production environment in Linux?
   - List the cli commands if possible.
+    1. Install pip if it is not in your system. It is assumed python is installed
+      $ sudo apt-get install python-pip
+    2. Install virtualenv
+       $ pip install virtualenv
+    3. Create a virtual environment. After this command, a folder named virtualenv_folder will be created.
+       $ virtualenv virtualenv_folder
+    4.  If you want to create a virtualenv for specific python version, type
+       $ virtualenv -p /usr/bin/python3 virtualenv_folder
+    5. Activate it
+       $ source virtualenv_folder/bin/activate
+    6. To deactivate
+       $ deactivate
+    
 
 ---
 ### 2. Are you familiar using any linux distro?
-- crontab
-- ssh
-- nfs
-- nginx
+      I am familiar using ubuntu.
+- crontab: Crontab is a command-line utility in Linux operating systems that allows users to schedule and automate recurring tasks or jobs.
+  
+- ssh: SSH is a cryptographically secure communication method that enables two computers to communicate over an unsecured line. 
+  
+- nfs:  NFS is a distributed file system protocol.
+  
+- nginx: Nginx is a popular open-source web server software and reverse proxy server.
 
+  
 ---
 ### 3. Setup a RESTful API with python & nginx.
 - Using localhost
