@@ -88,7 +88,7 @@ def curr_time():
 
 @app.route('/readdata', methods=['POST'])
 def read_send():
-    data = request.json
+    data = request.get_json()
     return jsonify(data)
 
 @app.errorhandler(404)
@@ -97,7 +97,7 @@ def not_found_error(error):
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=5000)
+    app.run(host='127.0.0.1', port=80)
 ```
 ---
 ### 3.1 Nginx (Optional)
