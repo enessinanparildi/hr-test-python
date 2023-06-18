@@ -8,18 +8,18 @@ This is the interview questions for python dev skills.
   PyCharm
 - How do you setup python production environment in Linux?
   - List the cli commands if possible.
-    1. Install pip if it is not in your system. It is assumed python is installed
+    1. Install pip if it is not in your system. It is assumed python is installed\
       $ sudo apt-get install python-pip
-    2. Install virtualenv
-       $ pip install virtualenv
-    3. Create a virtual environment. After this command, a folder named virtualenv_folder will be created.
-       $ virtualenv virtualenv_folder
-    4.  If you want to create a virtualenv for specific python version, type
-       $ virtualenv -p /usr/bin/python3 virtualenv_folder
-    5. Activate it
-       $ source virtualenv_folder/bin/activate
-    6. To deactivate
-       $ deactivate
+    2. Install virtualenv\
+      $ pip install virtualenv
+    3. Create a virtual environment. After this command, a folder named virtualenv_folder will be created.\
+      $ virtualenv virtualenv_folder
+    4. If you want to create a virtualenv for a specific Python version, type\
+      $ virtualenv -p /usr/bin/python3 virtualenv_folder
+    5. Activate it\
+      $ source virtualenv_folder/bin/activate
+    6. To deactivate\
+      $ deactivate
     
 
 ---
@@ -75,8 +75,30 @@ curl 127.0.0.1/noexist
 ```
 
 #### What to submit:
-- Python code
+```
+from flask import Flask, jsonify, request
+import time
 
+app = Flask(__name__)
+
+@app.route('/timestamp')
+def curr_time():
+    current_timestamp = int(time.time())
+    return jsonify(timestamp=current_timestamp)
+
+@app.route('/readdata', methods=['POST'])
+def read_send():
+    data = request.json
+    return jsonify(data)
+
+@app.errorhandler(404)
+def not_found_error(error):
+    return jsonify(error='Not Found'), 404
+
+
+if __name__ == '__main__':
+    app.run(host='127.0.0.1', port=5000)
+```
 ---
 ### 3.1 Nginx (Optional)
 - Use Nginx as the front web server (reverse proxy)
