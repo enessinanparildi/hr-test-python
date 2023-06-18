@@ -106,7 +106,7 @@ if __name__ == '__main__':
 
 #### What to submit:
 - Nginx server config
-'''
+  """
   server {
     listen 80;
     server_name your_domain.com;
@@ -117,4 +117,4 @@ if __name__ == '__main__':
         proxy_set_header X-Real-IP $remote_addr;
     }
 }
-'''
+"""
