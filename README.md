@@ -8,7 +8,7 @@ This is the interview questions for python dev skills.
   PyCharm
 - How do you setup python production environment in Linux?
   - List the cli commands if possible.
-    1. Install pip if it is not in your system. It is assumed python is installed\
+    1. Install pip if it is not in your system. It is assumed python is installed, if not we can use sudo apt update && sudo apt upgrade and then sudo apt install python3\
       $ sudo apt-get install python-pip
     2. Install virtualenv\
       $ pip install virtualenv
@@ -29,7 +29,7 @@ This is the interview questions for python dev skills.
   
 - ssh: SSH is a cryptographically secure communication method that enables two computers to communicate over an unsecured line. 
   
-- nfs:  NFS is a distributed file system protocol.
+- nfs: NFS is a distributed file system protocol that allows a user on a client computer to access files over a network as if they were stored locally on the client machine. 
   
 - nginx: Nginx is a popular open-source web server software and reverse proxy server.
 
